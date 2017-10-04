@@ -1,8 +1,8 @@
 {
-  "name": "ngsi-parser",
-  "version": "1.0.0",
+  "name": "ocbjslibrary",
+  "version": "0.1.3",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/OCB.js",
   "scripts": {
     "test": "nodemon index.js"
   },
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/cenidetiot/NGSI.jsLibrary/issues"
   },
-  "homepage": "https://github.com/cenidetiot/NGSI.jsLibrary#readme"
+  "homepage": "https://github.com/cenidetiot/NGSI.jsLibrary#readme",
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
 }
