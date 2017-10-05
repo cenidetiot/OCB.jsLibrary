@@ -3,7 +3,15 @@ var cb = require('./lib/OCB.js');
 // Configuracion para la conexion con el context broker
 cb.config('http://207.249.127.149',1026,'v2'); 
 cb.testConnect();
-//cb.listEntities();
+
+
+
+cb.listEntities().then((entities) => {
+    console.log(entities)
+})
+
+
+
 /*cb.createEntity({
     "id": "Room10",
     "temperature": {
