@@ -7,10 +7,13 @@ cb.testConnect();
 
 
 cb.listEntities().then((entities) => {
-    console.log(entities)
+    //console.log(entities)
 })
 
-
+cb.updateEntityAttributeValue('Room10', 'temperature', 'value', '2')
+.then((status) => {
+    console.log(status)
+}).catch((err) => console.log(err))
 
 /*cb.createEntity({
     "id": "Room10",
@@ -26,12 +29,12 @@ cb.listEntities().then((entities) => {
     },
     "type": "Room"
 });*/
-cb.getEntity('Room10');
+//cb.getEntity('Room10');
 /*cb.updateJSONAttrEntity('Room10', 'temperature', {
     "type": "Float",
     "value": 34.982398
 });*/
-/*cb.updateEntityAttributeValue('Room10', 'temperature', 'value', '2')
+/*
 cb.updateEntityAttrs('Room10', { 
     "temperature": {
         "value": 75,
