@@ -7,12 +7,12 @@ cb.testConnect();
 
 
 cb.listEntities().then((entities) => {
-    //console.log(entities)
+    console.log(entities)
 })
 
 cb.updateEntityAttributeValue('Room10', 'temperature', 'value', '2')
-.then((status) => {
-    //console.log(status)
+.then((result) => {
+    console.log(result)
 }).catch((err) => console.log(err))
 
 cb.updateEntityAttrs('Room10', { 
@@ -22,9 +22,21 @@ cb.updateEntityAttrs('Room10', {
     }
 }).then((result) => console.log(result)).catch((err) => console.log(err))
 
+cb.updateJSONAttrEntity('Room10', 'temperature', {
+    "type": "Float",
+    "value": 34.982398
+}).then((result) => console.log(result)).catch((err) => console.log(err))
 
-/*cb.createEntity({
-    "id": "Room10",
+cb.deleteEntity('RoomPrueba2')
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+
+cb.getEntity("Room11")
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+
+cb.createEntity({
+    "id": "RoomPromise",
     "temperature": {
         "metadata": {
             "accuracy": {
@@ -36,17 +48,6 @@ cb.updateEntityAttrs('Room10', {
         "value": 26.5
     },
     "type": "Room"
-});*/
-//cb.getEntity('Room10');
-/*cb.updateJSONAttrEntity('Room10', 'temperature', {
-    "type": "Float",
-    "value": 34.982398
-});*/
-/*
-cb.updateEntityAttrs('Room10', { 
-    "temperature": {
-        "value": 75,
-        "type": "Integer"
-    }
-});
-cb.deleteEntity('Room10');*/
+}).then((result) => console.log(result))
+.catch((err) => console.log(err))
+
