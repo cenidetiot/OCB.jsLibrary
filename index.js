@@ -12,8 +12,16 @@ cb.listEntities().then((entities) => {
 
 cb.updateEntityAttributeValue('Room10', 'temperature', 'value', '2')
 .then((status) => {
-    console.log(status)
+    //console.log(status)
 }).catch((err) => console.log(err))
+
+cb.updateEntityAttrs('Room10', { 
+    "temperature": {
+        "value": 75,
+        "type": "Integer"
+    }
+}).then((result) => console.log(result)).catch((err) => console.log(err))
+
 
 /*cb.createEntity({
     "id": "Room10",
