@@ -4,7 +4,7 @@ var cb = require('./lib/OCB.js');
 cb.config('http://207.249.127.149',1026,'v2'); 
 cb.testConnect();
 
-cb.getEntity("Room1")
+cb.getEntity("Room10")
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 
@@ -13,9 +13,8 @@ cb.listEntities()
 .catch((err) => console.log(err))
 
 cb.updateEntityAttributeValue('Room1', 'temperature', 'value', '2')
-.then((result) => {
-    console.log(result)
-}).catch((err) => console.log(err))
+.then((result) => {console.log(result)})
+.catch((err) => console.log(err))
 /*
 cb.updateEntityAttrs('Room1', { 
     "temperature": {
