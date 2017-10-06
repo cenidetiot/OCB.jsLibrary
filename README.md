@@ -11,7 +11,7 @@ npm install ocb-sender
 ```
 ## Basic Usage
 
-### Configuration to the connection with the Context Broker.
+### Configuration to the connection with the ContextBroker.
 
 ```
  cb.config(urlContextBroker, port, version);
@@ -25,7 +25,7 @@ cb.config('http://207.249.127.149',1026,'v2');
 ```
 cb.testConnect();
 ```
-###  Get NGSI object of an entity registered in the Context Broker.
+###  Get NGSI object of an entity registered in the ContextBroker.
 ```
 cb.getEntity('idEntity')
 .then((result) => console.log(result))
@@ -37,14 +37,14 @@ cb.getEntity('Room1')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-### List all the NGSI entities that are stored in the Context Broker.
+### List all the NGSI entities that are stored in the ContextBroker.
  Example
  ```
 cb.listEntities()
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 ```
-### Delete information of an NGSI entity stored in the Context Broker.
+### Delete information of an NGSI entity stored in the ContextBroker.
 ```
 cb.deleteEntity('idEntity')
 .then((result) => console.log(result))
@@ -56,7 +56,7 @@ cb.deleteEntity('idEntity')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-### Create an NGSI entity in the Context Broker
+### Create an NGSI entity in the ContextBroker
 ```
 cb.createEntity({NGSI JSON OBJECT})
 .then((result) => console.log(result))
@@ -78,6 +78,38 @@ cb.createEntity({
     },
     "type": "Room"
 }).then((result) => console.log(result))
+.catch((err) => console.log(err))
+```
+###  Update all the object attributes of a entity 
+```
+cb.updateEntityAttrs('idEntity', {NGSI JSON OBJECT})
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+```
+> Example 
+```
+cb.updateEntityAttrs('Room1', { 
+    "temperature": {
+        "value": 75.9345,
+        "type": "Float"
+    }
+})
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+```
+###  Update the JSON Object of a atttribute of the entity
+```
+cb.updateJSONAttrEntity('idEntity', 'nameAttribute', {JSON OBJECT})
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+```
+> Example
+```
+cb.updateJSONAttrEntity('Room1', 'temperature', {
+    "type": "Float",
+    "value": 34.982398
+})
+.then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ## License
