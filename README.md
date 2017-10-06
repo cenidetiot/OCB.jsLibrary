@@ -10,34 +10,33 @@ npm install ocb-sender
 ```
 ## Basic Usage
 
-### Configuracion para la conexion con el Context Broker.
+### Configuración para la conexión con el Context Broker.
 
->```
+```
  cb.config(urlContextBroker, port, version);
  ```
 > Example
-> ```
-  cb.config('http://207.249.127.149',1026,'v2'); 
-  ```
+```
+cb.config('http://207.249.127.149',1026,'v2'); 
+```
 ### Test de conexión de comunicación con el Context Broker.
-
 > Example
-> ```
-  cb.testConnect();
-  ```
+```
+cb.testConnect();
+```
 ###  Get JSON object of an entity registered in the Context Broker.
-> ```
-  # cb.getEntity('idEntity')
-  .then((result) => console.log(result))
-  .catch((err) => console.log(err))
-  ```
+```
+# cb.getEntity('idEntity')
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+```
 > Example
 ```
 # cb.getEntity('Room1')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
- ### List all the entities that are stored in the Context Broker.
+### List all the entities that are stored in the Context Broker.
  Example
  ```
  # cb.listEntities()
