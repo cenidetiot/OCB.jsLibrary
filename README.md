@@ -10,7 +10,7 @@ npm install ocb-sender
 ```
 ## Basic Usage
 
-### Configuración para la conexión con el Context Broker.
+### Configuration to the connection with the Context Broker.
 
 ```
  cb.config(urlContextBroker, port, version);
@@ -19,7 +19,7 @@ npm install ocb-sender
 ```
 cb.config('http://207.249.127.149',1026,'v2'); 
 ```
-### Test de conexión de comunicación con el Context Broker.
+### Testing comunication with the Context Broker.
 > Example
 ```
 cb.testConnect();
@@ -43,6 +43,17 @@ cb.testConnect();
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 ```
-
+### Delete information of an entity stored in the Context Broker.
+```
+cb.deleteEntity('idEntity')
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+```
+> Example 
+```
+cb.deleteEntity('idEntity')
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+```
 
 
