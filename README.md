@@ -112,6 +112,18 @@ cb.updateJSONAttrEntity('Room1', 'temperature', {
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
+###  Update the value attribute  of a JSON Object
+```
+cb.updateEntityAttributeValue('idEntity', 'nameAttribute', 'value')
+.then((result) => {console.log(result)})
+.catch((err) => console.log(err))
+```
+> Example
+```
+cb.updateEntityAttributeValue('Room1', 'temperature', '2')
+.then((result) => {console.log(result)})
+.catch((err) => console.log(err))
+```
 ## License
 
 MIT © [Haidee Onofre & Daniel EStrada]
