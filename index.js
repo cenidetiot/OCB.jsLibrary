@@ -21,10 +21,10 @@ cb.listEntities()
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 
-cb.updateEntityAttributeValue('Room1', 'pressure', '10')
+cb.updateEntityAttributeValue('Room1', 'message', 'hi')
 .then((result) => {console.log(result)})
 .catch((err) => console.log(err))
-
+/*
 cb.updateEntityAttrs('Room1', { 
     "temperature": {
         "value": 75,
@@ -64,5 +64,5 @@ cb.createEntity({
     "type": "Room"
 })
 .then((result) => console.log(result))
-.catch((err) => console.log(err))
+.catch((err) => console.log(err))*/
 
