@@ -11,7 +11,7 @@ npm install ocb-sender
 ```
 ## Basic Usage
 
-### Import de npm module in a javascript file.
+### Import npm module in a javascript file.
 
 ES5
 
@@ -23,7 +23,7 @@ ES6
     import OCB as cb from  ocb-sender;
 ```
 
-### Configuration to the connection with the ContextBroker.
+### Connection configuration with the ContextBroker.
 
 ```
  cb.config(urlContextBroker, port, version);
