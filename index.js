@@ -3,9 +3,10 @@ var cb = require('./lib/OCB.js');
 // Configuracion para la conexion con el context broker
 cb.config('http://207.249.127.149',1026,'v2'); 
 
-cb.testConnect().then((result) => console.log(result))
+cb.testConnect()
+.then((result) => console.log(result))
 .catch((err) => console.log(err))
-
+/*
 //MÉTODO NUEVO 
 cb.addJSONAttributeToEntity("Room1",{
     "pressure":{
@@ -15,7 +16,7 @@ cb.addJSONAttributeToEntity("Room1",{
 })
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
-
+*/
 cb.getEntity("Room10")
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
@@ -24,7 +25,7 @@ cb.listEntities()
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 
-cb.updateEntityAttributeValue('Room1', 'message', 'hi')
+cb.updateEntityAttributeValue('Room91', 'temperature', '56')
 .then((result) => {console.log(result)})
 .catch((err) => console.log(err))
 /*
