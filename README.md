@@ -1,10 +1,10 @@
 # FIWARE OCB - sender
 
 ## What is ocb-sender?
+
+ocb - sender is a npm module that handle a NGSI Object for them transportation to FIWARE Orion Context Broker. Makes easy send context information to FIWARE Ecosystem.
 ***
-ocb - sender is a npm module that handle a NGSI Object for them transportation to FIWARE Orion Context Broker. Makes easy send context information to Fiware Ecosystem
-***
-## Install
+## How to install
 
 ```
 npm install ocb-sender
