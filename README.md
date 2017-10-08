@@ -17,7 +17,7 @@ npm install ocb-sender
  cb.config(urlContextBroker, port, version);
  ```
 > Example
-```
+```js
 cb.config('http://207.249.127.149',1026,'v2'); 
 ```
 ### Testing comunication with the Context Broker.
