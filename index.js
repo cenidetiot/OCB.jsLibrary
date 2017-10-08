@@ -1,11 +1,12 @@
 var cb = require('./lib/OCB.js');
 
 // Configuracion para la conexion con el context broker
-cb.config('http://207.249.127.149',1026,'v2'); 
-
-cb.testConnect()
+cb.config('http://207.249.127.149',1026,'v2')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
+
+//cb.testConnect()
+
 /*
 //MÉTODO NUEVO 
 cb.addJSONAttributeToEntity("Room1",{
