@@ -9,7 +9,7 @@ cb.addJSONAttributeToEntity("Room1",{
     "pressure":{
 		"value": 90,
 		"type": "Integer"
-	}
+	} 
 })
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
