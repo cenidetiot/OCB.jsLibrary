@@ -11,6 +11,18 @@ npm install ocb-sender
 ```
 ## Basic Usage
 
+### Import de npm module in the js file.
+
+ES5
+
+```
+    var cb = require('ocb-sender');
+```
+ES6
+```
+    import OCB as cb from  ocb-sender;
+```
+
 ### Configuration to the connection with the ContextBroker.
 
 ```
@@ -56,7 +68,7 @@ cb.deleteEntity('idEntity')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-### Create an NGSI entity in the ContextBroker
+### Create an NGSI entity in the ContextBroker.
 ```
 cb.createEntity({NGSI JSON OBJECT})
 .then((result) => console.log(result))
@@ -80,7 +92,20 @@ cb.createEntity({
 }).then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-###  Update all the object attributes of a entity 
+### Add a JSON Attribute to an NGSI entity.
+```
+cb.addJSONAttributeToEntity('idEntity',{ JSON OBJECT })
+```
+> Example
+```js
+cb.addJSONAttributeToEntity("Room1",{
+    "pressure":{
+		      "value": 90,
+		      "type": "Integer"
+	    }
+})
+```
+###  Update all the object attributes of a entity.
 ```
 cb.updateEntityAttrs('idEntity', {NGSI JSON OBJECT})
 .then((result) => console.log(result))
@@ -97,7 +122,7 @@ cb.updateEntityAttrs('Room1', {
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-###  Update the JSON Object of a atttribute of the entity
+###  Update the JSON Object of a atttribute of the entity.
 ```
 cb.updateJSONAttrEntity('idEntity', 'nameAttribute', {JSON OBJECT})
 .then((result) => console.log(result))
@@ -112,7 +137,7 @@ cb.updateJSONAttrEntity('Room1', 'temperature', {
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-###  Update the value attribute  of a JSON Object
+###  Update the value attribute  of a JSON Object.
 ```
 cb.updateEntityAttributeValue('idEntity', 'nameAttribute', 'value')
 .then((result) => {console.log(result)})
