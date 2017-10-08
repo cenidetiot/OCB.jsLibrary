@@ -22,7 +22,7 @@ cb.config('http://207.249.127.149',1026,'v2');
 ```
 ### Testing comunication with the Context Broker.
 > Example
-```
+```js
 cb.testConnect();
 ```
 ###  Get NGSI object of an entity registered in the ContextBroker.
@@ -32,7 +32,7 @@ cb.getEntity('idEntity')
 .catch((err) => console.log(err))
 ```
 > Example
-```
+```js
 cb.getEntity('Room1')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
@@ -51,7 +51,7 @@ cb.deleteEntity('idEntity')
 .catch((err) => console.log(err))
 ```
 > Example 
-```
+```js
 cb.deleteEntity('idEntity')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
@@ -63,7 +63,7 @@ cb.createEntity({NGSI JSON OBJECT})
 .catch((err) => console.log(err))
 ```
 > Example
-```
+```js
 cb.createEntity({
     "id": "Room1",
     "temperature": {
@@ -87,7 +87,7 @@ cb.updateEntityAttrs('idEntity', {NGSI JSON OBJECT})
 .catch((err) => console.log(err))
 ```
 > Example 
-```
+```js
 cb.updateEntityAttrs('Room1', { 
     "temperature": {
         "value": 75.9345,
@@ -104,7 +104,7 @@ cb.updateJSONAttrEntity('idEntity', 'nameAttribute', {JSON OBJECT})
 .catch((err) => console.log(err))
 ```
 > Example
-```
+```js
 cb.updateJSONAttrEntity('Room1', 'temperature', {
     "type": "Float",
     "value": 34.982398
@@ -119,14 +119,14 @@ cb.updateEntityAttributeValue('idEntity', 'nameAttribute', 'value')
 .catch((err) => console.log(err))
 ```
 > Example
-```
+```js
 cb.updateEntityAttributeValue('Room1', 'temperature', '2')
 .then((result) => {console.log(result)})
 .catch((err) => console.log(err))
 ```
 ## License
 
-MIT © [Haidee Onofre & Daniel EStrada]
+MIT © [Haidee Onofre & Daniel Torres]
 
 
 
