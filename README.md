@@ -15,11 +15,11 @@ npm install ocb-sender
 
 ES5
 
-```
+```js
     var cb = require('ocb-sender');
 ```
 ES6
-```
+```js
     import OCB as cb from  ocb-sender;
 ```
 
