@@ -3,9 +3,7 @@
   "version": "1.1.3",
   "description": "",
   "main": "./lib/OCB.js",
-  "scripts": {
-    //"test": "nodemon index.js"
-  },
+  "scripts": { },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cenidetiot/OCB.jsLibrary.git"
