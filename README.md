@@ -96,7 +96,7 @@ cb.createEntity({
 }).then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-### Add a JSON Attribute to an NGSI entity.
+### Add a JSON Attribute to a NGSI entity.
 ```
 cb.addJSONAttributeToEntity('idEntity',{ JSON OBJECT })
 ```
