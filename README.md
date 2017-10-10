@@ -26,7 +26,9 @@ ES6
 ### Connection configuration with the ContextBroker.
 
 ```
- cb.config(urlContextBroker, port, version);
+ cb.config(urlContextBroker, port, version)
+ .then((result) => console.log(result))
+ .catch((err) => console.log(err))
  ```
 > Example
 ```js
@@ -35,7 +37,9 @@ cb.config('http://207.249.127.149',1026,'v2');
 ### Testing comunication with the Context Broker.
 > Example
 ```js
-cb.testConnect();
+cb.testConnect().
+then((result) => console.log(result))
+.catch((err) console.log(err))
 ```
 ###  Get NGSI object of an entity registered in the ContextBroker.
 ```
@@ -56,7 +60,7 @@ cb.listEntities()
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 ```
-### Delete information of an NGSI entity stored in the ContextBroker.
+### Delete information NGSI entity stored in the ContextBroker.
 ```
 cb.deleteEntity('idEntity')
 .then((result) => console.log(result))
@@ -68,7 +72,7 @@ cb.deleteEntity('idEntity')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-### Create an NGSI entity in the ContextBroker.
+### Create NGSI entity in the ContextBroker.
 ```
 cb.createEntity({NGSI JSON OBJECT})
 .then((result) => console.log(result))
@@ -105,7 +109,7 @@ cb.addJSONAttributeToEntity("Room1",{
 	    }
 })
 ```
-###  Update all the object attributes of a entity.
+###  Update all the object attributes of an entity.
 ```
 cb.updateEntityAttrs('idEntity', {NGSI JSON OBJECT})
 .then((result) => console.log(result))
@@ -122,7 +126,7 @@ cb.updateEntityAttrs('Room1', {
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-###  Update the JSON Object of a atttribute of the entity.
+###  Update the JSON Object of an atttribute of the entity.
 ```
 cb.updateJSONAttrEntity('idEntity', 'nameAttribute', {JSON OBJECT})
 .then((result) => console.log(result))
@@ -151,7 +155,7 @@ cb.updateEntityAttributeValue('Room1', 'temperature', '2')
 ```
 ## License
 
-MIT © [Haidee Onofre & Daniel Torres]
+MIT © [Haidée Onofre & Daniel Torres]
 
 
 
