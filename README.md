@@ -39,8 +39,8 @@ cb.config('http://207.249.127.149',1026,'v2')
 ### Testing comunication with the Context Broker.
 > Example
 ```js
-cb.testConnect().
-then((result) => console.log(result))
+cb.testConnect()
+.then((result) => console.log(result))
 .catch((err) console.log(err))
 ```
 ###  Get NGSI object of an entity registered in the ContextBroker.
