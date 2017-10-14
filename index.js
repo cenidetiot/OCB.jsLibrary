@@ -27,7 +27,7 @@ cb.listEntities()
 .catch((err) => console.log(err))
 */
 
-//MÉTODOS NUEVOS V2.0.0
+//MÉTODOS NUEVOS V1.3.0
 //Get attributes of an entity
 cb.getEntityAttrs("Room1")
 .then((result) => console.log(result))
