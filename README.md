@@ -1,5 +1,7 @@
 # FIWARE OCB - sender  
 [![Build Status](https://travis-ci.org/cenidetiot/OCB.jsLibrary.svg?branch=master)](https://travis-ci.org/cenidetiot/OCB.jsLibrary)
+[![Node version](https://img.shields.io/node/v/ocb-sender.svg?style=flat)](http://nodejs.org/download/)
+[![https://nodei.co/npm/ocb-sender.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/ocb-sender.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ocb-sender)
 
 ## What is ocb-sender?
 
