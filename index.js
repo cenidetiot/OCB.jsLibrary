@@ -1,14 +1,12 @@
 var cb = require('./lib/OCB.js');
 
-// Configuracion para la conexion con el context broker
+// Configuration for the connection with the ContextBroker
 cb.config('http://207.249.127.149',1026,'v2')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 
-//cb.testConnect()
-
 /*
-//MÉTODO NUEVO 
+//Add new attribute to an entity
 cb.addJSONAttributeToEntity("Room1",{
     "pressure":{
 		"value": 90,
@@ -17,19 +15,39 @@ cb.addJSONAttributeToEntity("Room1",{
 })
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
-*/
+
+//Get NGSI Entity
 cb.getEntity("Room10")
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 
+//Get list of entities storaged in ContextBroker
 cb.listEntities()
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
+*/
 
-cb.updateEntityAttributeValue('Room91', 'temperature', '56')
+//MÉTODOS NUEVOS V2.0.0
+//Get attributes of an entity
+cb.getEntityAttrs("Room1")
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+
+//Get content attribute of an entity
+cb.getAttributeEntity("Room1", "temperature")
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+
+//Get entity list per type 
+cb.getEntityListType('Room')
+.then((entities) => {console.log(entities)})
+.catch((err) => console.log(err))
+
+/*
+cb.updateEntityAttributeValue('Room1', 'temperature', 16)
 .then((result) => {console.log(result)})
 .catch((err) => console.log(err))
-/*
+
 cb.updateEntityAttrs('Room1', { 
     "temperature": {
         "value": 75,
@@ -46,16 +64,16 @@ cb.updateJSONAttrEntity('Room1', 'temperature', {
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 
-cb.deleteEntity('RoomPrueba2')
+cb.deleteEntity('Room1')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 
-cb.getEntity("Room11")
+cb.getEntity("Room1")
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 
 cb.createEntity({
-    "id": "Room1",
+    "id": "Room4",
     "temperature": {
         "metadata": {
             "accuracy": {
