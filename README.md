@@ -25,7 +25,7 @@ ES6
 
 ### Connection configuration with the ContextBroker.
 
-```
+```js
  cb.config(urlContextBroker, port, version)
  .then((result) => console.log(result))
  .catch((err) => console.log(err))
@@ -44,7 +44,7 @@ cb.testConnect()
 .catch((err) console.log(err))
 ```
 ###  Get NGSI object of an entity registered in the ContextBroker.
-```
+```js
 cb.getEntity('idEntity')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
@@ -57,13 +57,13 @@ cb.getEntity('Room1')
 ```
 ### List all the NGSI entities that are stored in the ContextBroker.
  Example
- ```
+ ```js
 cb.listEntities()
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 ```
 ### Delete information NGSI entity stored in the ContextBroker.
-```
+```js
 cb.deleteEntity('idEntity')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
@@ -75,7 +75,7 @@ cb.deleteEntity('idEntity')
 .catch((err) => console.log(err))
 ```
 ### Create NGSI entity in the ContextBroker.
-```
+```js
 cb.createEntity({NGSI JSON OBJECT})
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
@@ -99,7 +99,7 @@ cb.createEntity({
 .catch((err) => console.log(err))
 ```
 ### Add a JSON Attribute to a NGSI entity.
-```
+```js
 cb.addJSONAttributeToEntity('idEntity',{ JSON OBJECT })
 ```
 > Example
@@ -112,7 +112,7 @@ cb.addJSONAttributeToEntity("Room1",{
 })
 ```
 ###  Update all the object attributes of an entity.
-```
+```js
 cb.updateEntityAttrs('idEntity', {NGSI JSON OBJECT})
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
@@ -129,7 +129,7 @@ cb.updateEntityAttrs('Room1', {
 .catch((err) => console.log(err))
 ```
 ###  Update the JSON Object of an atttribute of the entity.
-```
+```js
 cb.updateJSONAttrEntity('idEntity', 'nameAttribute', {JSON OBJECT})
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
@@ -144,7 +144,7 @@ cb.updateJSONAttrEntity('Room1', 'temperature', {
 .catch((err) => console.log(err))
 ```
 ###  Update the value attribute  of a JSON Object.
-```
+```js
 cb.updateEntityAttributeValue('idEntity', 'nameAttribute', 'value')
 .then((result) => {console.log(result)})
 .catch((err) => console.log(err))
