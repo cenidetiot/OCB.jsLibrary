@@ -1,4 +1,5 @@
-# FIWARE OCB - sender
+# FIWARE OCB - sender  
+[![Build Status](https://travis-ci.org/cenidetiot/OCB.jsLibrary.svg?branch=master)](https://travis-ci.org/cenidetiot/OCB.jsLibrary)
 
 ## What is ocb-sender?
 
