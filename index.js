@@ -26,7 +26,7 @@ cb.listEntities()
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 */
-
+/*
 //MÉTODOS NUEVOS V1.3.0
 //Get attributes of an entity
 cb.getEntityAttrs("Room1")
@@ -42,9 +42,9 @@ cb.getAttributeEntity("Room1", "temperature")
 cb.getEntityListType('Room')
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
+*/
 
-
-console.log(cb.queryEntitiesOnArea([
+cb.queryEntitiesOnArea([
     [18.87574, -99.21975],
     [18.87681, -99.21932],
     [18.87697, -99.2203],
@@ -52,10 +52,9 @@ console.log(cb.queryEntitiesOnArea([
     [18.87627, -99.22014],
     [18.875874, -99.220155],
     [18.87574, -99.21975]
+]).then((result) => console.log(JSON.stringify(result)))
 
-]))
-
-console.log(cb.queryEntitiesOnArea([
+cb.queryEntitiesOnArea([
     "18.87574, -99.21975",
     "18.87681, -99.21932",
     "18.87697, -99.2203",
@@ -64,7 +63,7 @@ console.log(cb.queryEntitiesOnArea([
     "18.875874, -99.220155",
     "18.87574, -99.21975"
 
-]))
+],".*","Device",true).then((result) => console.log(JSON.stringify(result)))
 
 /*
 cb.updateEntityAttributeValue('Room1', 'temperature', 16)
