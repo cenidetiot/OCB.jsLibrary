@@ -43,6 +43,29 @@ cb.getEntityListType('Room')
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 
+
+console.log(cb.queryEntitiesOnArea([
+    [18.87574, -99.21975],
+    [18.87681, -99.21932],
+    [18.87697, -99.2203],
+    [18.87656, -99.2202],
+    [18.87627, -99.22014],
+    [18.875874, -99.220155],
+    [18.87574, -99.21975]
+
+]))
+
+console.log(cb.queryEntitiesOnArea([
+    "18.87574, -99.21975",
+    "18.87681, -99.21932",
+    "18.87697, -99.2203",
+    "18.87656, -99.2202",
+    "18.87627, -99.22014",
+    "18.875874, -99.220155",
+    "18.87574, -99.21975"
+
+]))
+
 /*
 cb.updateEntityAttributeValue('Room1', 'temperature', 16)
 .then((result) => {console.log(result)})
