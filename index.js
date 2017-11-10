@@ -57,7 +57,7 @@ console.log(query);
 cb.geoQueryContext(query)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))*/
-cb.queryEntitiesOnArea([
+/*cb.queryEntitiesOnArea([
     [18.87574, -99.21975],
     [18.87681, -99.21932],
     [18.87697, -99.2203],
@@ -66,9 +66,9 @@ cb.queryEntitiesOnArea([
     [18.875874, -99.220155],
     [18.87574, -99.21975]
 ]).then((result) => console.log(JSON.stringify(result)))
-
+*/
 cb.queryEntitiesOnArea([
-    "18.87574, -99.21975",
+    "18.87574, -99.21975", 
     "18.87681, -99.21932",
     "18.87697, -99.2203",
     "18.87656, -99.2202",
@@ -107,7 +107,7 @@ cb.getEntity("Room1")
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 */
-cb.createEntity({
+/*cb.createEntity({
     "id": "Room4",
     "temperature": {
         "metadata": {
@@ -122,5 +122,5 @@ cb.createEntity({
     "type": "Room"
 })
 .then((result) => console.log(result))
-.catch((err) => console.log(err))
+.catch((err) => console.log(err))*/
 

@@ -3,7 +3,7 @@
   "version": "1.5.2",
   "description": "",
   "main": "./lib/OCB.js",
-  "scripts": { },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cenidetiot/OCB.jsLibrary.git"
