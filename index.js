@@ -46,6 +46,11 @@ cb.listEntities()
 .then((result) => console.log(result))
 .catch((err) => console.log(err))*/
 
+//GET ENTITY ATTRIBUTE VALUE
+/*cb.getEntityAttributeValue("Room1", "temperature")
+.then((result) => console.log(result))
+.catch((err) => console.log(err))*/
+
 cb.getEntityAttributeValue("RoomTest", "temperature")
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
