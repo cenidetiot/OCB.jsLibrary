@@ -24,7 +24,7 @@ ocb - sender is a npm module that handle a NGSI Object for them transportation t
 		* [Get Entity Attributes](#get-entity-attributes)
 		* [Get Entity](#get-entity)
 		* [Get entities list of an entity type](#get-entities-list-of-an-entity-type)
-		* [Get All Entities] (#get-all-entities)
+		* [Get All Entities](#get-all-entities)
 * [License](#license)
 
 ## How to install
