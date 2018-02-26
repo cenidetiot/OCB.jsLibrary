@@ -1,7 +1,5 @@
 
 # Entities Functions
-
-ocb - sender is a npm module that handle a NGSI Object for them transportation to FIWARE Orion Context Broker. It makes possible send context information in easy way to the FIWARE Ecosystem.
 ***
 ## Indéx navigation
 
@@ -18,6 +16,7 @@ ocb - sender is a npm module that handle a NGSI Object for them transportation t
     * [Update Functions](#update-functions)
     * [Delete Functions](#dele-functions)
 	    * [Delete entity](#delete-entity)
+        * [Delete entity attribute](#delete-entity-attribute)
 
 
 ## Read Functions.

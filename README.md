@@ -2,7 +2,7 @@
 
 [![https://nodei.co/npm/ocb-sender.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/ocb-sender.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ocb-sender)
 
-[![Build Status](https://travis-ci.org/cenidetiot/OCB.jsLibrary.svg?branch=master)](https://travis-ci.org/cenidetiot/OCB.jsLibrary)
+[![Build Status](https://api.travis-ci.org/cenidetiot/OCB.jsLibrary.svg?branch=master)](https://travis-ci.org/cenidetiot/OCB.jsLibrary)
 [![devDependencies Status](https://david-dm.org/dwyl/hapi-auth-jwt2/dev-status.svg)](https://david-dm.org/dwyl/hapi-auth-jwt2?type=dev)
 
 ## What is ocb-sender?
@@ -19,14 +19,8 @@ ocb - sender is a npm module that handle a NGSI Object for them transportation t
 	* [Get EntityType of ContextBroker](#get-entitytype-of-contextbroker)
 	* [Get EntitytTypes of ContextBroker](#get-entitytypes-of-contextbroker)
 	* [Entities Functions](docs/EntitiesFunctions.md)
-		* [Get Entity Attribute Value](#get-entity-attribute-value)
-		* [Get Entity Attribute](#get-entity-attribute)
-		* [Get Entity Attributes](#get-entity-attributes)
-		* [Get Entity](#get-entity)
-		* [Get entities list of an entity type](#get-entities-list-of-an-entity-type)
-		* [Get All Entities](#get-all-entities)
-		* [Create Entity](#create-entity)
-		* [Delete entity](#delete-entity)
+    * [Subscriptions Functions](docs/SubscriptionsFunctions.md)
+    * [Query Functions](docs/QueryFunctions.md)
 * [License](#license)
 
 ## How to install
