@@ -25,6 +25,8 @@ ocb - sender is a npm module that handle a NGSI Object for them transportation t
 		* [Get Entity](#get-entity)
 		* [Get entities list of an entity type](#get-entities-list-of-an-entity-type)
 		* [Get All Entities](#get-all-entities)
+		* [Create Entity](#create-entity)
+		* [Delete entity](#delete-entity)
 * [License](#license)
 
 ## How to install
@@ -124,24 +126,7 @@ cb.listEntities()
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 ```
-### Delete information NGSI entity stored in the ContextBroker.
-```js
-cb.deleteEntity('idEntity')
-.then((result) => console.log(result))
-.catch((err) => console.log(err))
-```
-> Example 
-```js
-cb.deleteEntity('idEntity')
-.then((result) => console.log(result))
-.catch((err) => console.log(err))
-```
-### Create NGSI entity in the ContextBroker.
-```js
-cb.createEntity({NGSI JSON OBJECT})
-.then((result) => console.log(result))
-.catch((err) => console.log(err))
-```
+### Create Entity.
 > Example
 ```js
 cb.createEntity({
@@ -158,6 +143,13 @@ cb.createEntity({
     },
     "type": "Room"
 }).then((result) => console.log(result))
+.catch((err) => console.log(err))
+```
+### Delete Entity.
+> Example 
+```js
+cb.deleteEntity("Room1")
+.then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Add a JSON Attribute to a NGSI entity.
