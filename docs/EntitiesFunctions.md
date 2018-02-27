@@ -137,5 +137,5 @@ cb.deleteEntity("Room1")
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-
+### Delete Entity Attribute.
 
