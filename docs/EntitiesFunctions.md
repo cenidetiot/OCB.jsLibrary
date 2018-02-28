@@ -14,10 +14,14 @@
     * [Create Functions](#create-functions)
 	    * [Create Entity](#create-entity)
     * [Update Functions](#update-functions)
+        * [Update Entity Attribute Value](#update-entity-attribute-value)
+        * [Update Attribute Data](#update-attribute-data)
+        * [Replace All Entity Attributes](#eplace-all-entities-attributes)
+        * [Update Existing Entity Attributes](#update-existing-entity-attributes)
+        * [Update Or Append Entity Attributes](#update-or-append-entity-attributes)
     * [Delete Functions](#dele-functions)
 	    * [Delete entity](#delete-entity)
         * [Delete entity attribute](#delete-entity-attribute)
-
 
 ## Read Functions.
 
@@ -56,7 +60,7 @@ cb.getEntityListType('Room')
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 ```
-### Get All Entities
+### Get All Entities.
 > Example
  ```js
 cb.listEntities()
@@ -73,11 +77,11 @@ cb.createEntity({
     "temperature": {
         "metadata": {
             "accuracy": {
-                "type": "Float",
+                "type": "Number",
                 "value": 0.8
             }
         },
-        "type": "Float",
+        "type": "Number",
         "value": 26.5
     },
     "type": "Room"
@@ -86,19 +90,36 @@ cb.createEntity({
 ```
 ##  Update Functions.
 
-### Add a JSON Attribute to a NGSI entity.
-> Example
+### Update Entity Attribute Value.
+>Example
 ```js
-cb.addJSONAttributeToEntity("Room1",{
-    "pressure":{
-		      "value": 90,
-		      "type": "Integer"
-	    }
+cb.updateEntityAttributeValue('Room1', 'temperature', 16)
+.then((result) => {console.log(result)})
+.catch((err) => console.log(err))
+```
+### Update Attribute Data.
+>Example
+```js
+cb.updateJSONAttrEntity('Room1', 'temperature', {
+    "type": "Number",
+    "value": 34.982398
 })
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-###  Update all the object attributes of an entity.
+### Replace All Entity Attributes.
+>Example
+```js
+cb.replaceAllEntityAttributes("RoomTest", {
+    "pressure": {
+        "value": 720,
+        "type": "Integer"
+    }
+})
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+```
+###  Update Existing Entity Attributes.
 > Example 
 ```js
 cb.updateEntityAttrs('Room1', { 
@@ -110,24 +131,18 @@ cb.updateEntityAttrs('Room1', {
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-###  Update the JSON Object of an atttribute of the entity.
+### Update Or Append Entity Attributes.
 > Example
 ```js
-cb.updateJSONAttrEntity('Room1', 'temperature', {
-    "type": "Float",
-    "value": 34.982398
+cb.addJSONAttributeToEntity("Room1",{
+    "pressure":{
+		      "value": 90,
+		      "type": "Integer"
+	    }
 })
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
-###  Update the value attribute  of a JSON Object.
-> Example
-```js
-cb.updateEntityAttributeValue('Room1', 'temperature', '2')
-.then((result) => {console.log(result)})
-.catch((err) => console.log(err))
-```
-
 ## Delete Functions.
 
 ### Delete Entity.
@@ -138,4 +153,8 @@ cb.deleteEntity("Room1")
 .catch((err) => console.log(err))
 ```
 ### Delete Entity Attribute.
-
+```js
+cb.deleteEntityAttribute("RoomTest", "pressure")
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
+```

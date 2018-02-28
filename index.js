@@ -172,6 +172,7 @@ cb.queryEntitiesOnArea([
 ],".*","Device",true).then((result) => console.log(JSON.stringify(result)))
 */
 
+//UPDATE ENTITY ATTRIBUTE VALUE
 /*
 cb.updateEntityAttributeValue('Room1', 'temperature', 16)
 .then((result) => {console.log(result)})
@@ -186,6 +187,7 @@ cb.updateEntityAttributeValue('Room1', 'temperature', 16)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))*/
 
+//UPDATE ATTRIBUTE DATA
 /*cb.updateJSONAttrEntity('Room1', 'temperature', {
     "type": "Float",
     "value": 34.982398
@@ -193,6 +195,7 @@ cb.updateEntityAttributeValue('Room1', 'temperature', 16)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))*/
 
+//replaceAllEntityAttributes
 cb.replaceAllEntityAttributes("RoomTest", {
     "pressure": {
         "value": 720,
