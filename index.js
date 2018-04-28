@@ -11,7 +11,7 @@ cb.config('http://130.206.113.226',1026,'v2')
 .catch((err) => console.log(err))
 
 //RETRIEVE API RESOURCES
-cb.retrieveAPIResources()
+/*cb.retrieveAPIResources()
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 /*
@@ -51,10 +51,10 @@ cb.listEntities()
 .then((result) => console.log(result))
 .catch((err) => console.log(err))*/
 
-cb.getEntityAttributeValue("RoomTest", "temperature")
+/*cb.getEntityAttributeValue("RoomTest", "temperature")
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
-
+*/
 //Get entity list per type 
 /*cb.getEntityListType('Room')
 .then((entities) => {console.log(entities)})
@@ -196,7 +196,7 @@ cb.updateEntityAttributeValue('Room1', 'temperature', 16)
 .catch((err) => console.log(err))*/
 
 //replaceAllEntityAttributes
-cb.replaceAllEntityAttributes("RoomTest", {
+/*cb.replaceAllEntityAttributes("RoomTest", {
     "pressure": {
         "value": 720,
         "type": "Integer"
@@ -204,7 +204,7 @@ cb.replaceAllEntityAttributes("RoomTest", {
 })
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
-
+*/
 /*cb.deleteEntity('Room1')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))*/
@@ -339,7 +339,7 @@ Y EL NUMERO DE ENTIDADES QUE EXISTEN DE CADA TIPO DE ENTIDAD*/
 .catch((err) => console.log(err))*/
 
 //ACTUALIZAR SUSCRIPCIÓN
-cb.updateSubscription("5a93a9063fc4dec59e4ef8eb", {
+/*cb.updateSubscription("5a93a9063fc4dec59e4ef8eb", {
 	"description": "Alert subscription TEST",
 	"subject": {
 	"entities": [
@@ -385,4 +385,16 @@ cb.updateSubscription("5a93a9063fc4dec59e4ef8eb", {
 	"throttling": 5
 })
 .then((result) => console.log(result))
-.catch((err) => console.log(err))
+.catch((err) => console.log(err))*/
+
+
+
+
+
+
+
+
+
+
+
+
