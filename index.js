@@ -6,10 +6,10 @@ var cb = require('./lib/OCB.js');
 .catch((err) => console.log(err))*/
 
 // Configuration for the connection with the ContextBroker
-cb.config('http://130.206.113.226',1026,'v2')
+/*cb.config('http://130.206.113.226',1026,'v2')
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
-
+*/
 //RETRIEVE API RESOURCES
 /*cb.retrieveAPIResources()
 .then((result) => console.log(result))
@@ -388,10 +388,10 @@ Y EL NUMERO DE ENTIDADES QUE EXISTEN DE CADA TIPO DE ENTIDAD*/
 .catch((err) => console.log(err))*/
 
 
-cb.getEntityAttributeValue("Device_Smartphone_40bbcd9c6cae67c0", "batteryLevel")
+/*cb.getEntityAttributeValue("Device_Smartphone_40bbcd9c6cae67c0", "batteryLevel")
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
-
+*/
 
 
 
