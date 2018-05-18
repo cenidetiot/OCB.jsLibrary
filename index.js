@@ -388,7 +388,9 @@ Y EL NUMERO DE ENTIDADES QUE EXISTEN DE CADA TIPO DE ENTIDAD*/
 .catch((err) => console.log(err))*/
 
 
-
+cb.getEntityAttributeValue("Device_Smartphone_40bbcd9c6cae67c0", "batteryLevel")
+.then((result) => console.log(result))
+.catch((err) => console.log(err))
 
 
 
