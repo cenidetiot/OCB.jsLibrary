@@ -2,7 +2,7 @@
 
 [![https://nodei.co/npm/ocb-sender.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/ocb-sender.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/ocb-sender)
 
-## What is ocb-sender?
+## What is ngsi-parser?
 
 ocb - sender is a npm module that handle a NGSI Object for them transportation to FIWARE Orion Context Broker. It makes possible send context information in easy way to the FIWARE Ecosystem.
 ***
