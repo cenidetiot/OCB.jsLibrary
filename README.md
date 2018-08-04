@@ -41,38 +41,48 @@ ES6
 ```
 ## Module Usage
 
+### Headers 
+
+For the examples we will use the next JSON as headers
+```js
+var headers = {
+    'Fiware-Correlator': '3451e5c2-226d-11e6-aaf0-d48564c29d20'
+}
+```
+But you can use another options,one empty JSON or you can ignore the headers if you don't need them
+
 ### Connection configuration with Orion ContextBroker.
 
 ```js
- cb.config(urlContextBroker, port, version)
+ cb.config(urlContextBroker, port, version, headers)
  .then((result) => console.log(result))
  .catch((err) => console.log(err))
  ```
 > Example
 ```js
-cb.config('http://207.249.127.149',1026,'v2')
+cb.config('http://207.249.127.149:1026/v2/', headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Retrieve Orion ContextBroker API Rescources.
 > Example
 ```js
-cb.retrieveAPIResources()
+cb.retrieveAPIResources(headers)
 .then((result) => console.log(result))
 .catch((err) console.log(err))
 ```
 ### Get EntityType of ContextBroker.
 > Example
 ```js
-cb.getEntityType("Device")
+cb.getEntityType("Device",  headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Get EntityTypes of ContextBroker.
 > Example
 ```js
-cb.getEntityTypes()
-.then((result) => console.dir(result))
+cb.getEntityTypes(headers)
+.then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 

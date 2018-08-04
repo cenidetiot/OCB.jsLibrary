@@ -24,46 +24,55 @@
         * [Delete entity attribute](#delete-entity-attribute)
 
 ## Read Functions.
+### Headers 
+
+For the examples we will use the next JSON as headers
+```js
+var headers = {
+    'Fiware-Correlator': '3451e5c2-226d-11e6-aaf0-d48564c29d20'
+}
+```
+But you can use another options,one empty JSON or you can ignore the headers if you don't need them
 
 ### Get Entity Attribute Value.
 > Example
 ```js
-cb.getEntityAttributeValue("Room1", "temperature")
+cb.getEntityAttributeValue("Room1", "temperature", headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Get Entity Attribute.
 > Example
 ```js
-cb.getEntityAttribute("Room1", "temperature")
+cb.getEntityAttribute("Room1", "temperature", headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Get Entity Attributes.
 > Example
 ```js
-cb.getEntityAttrs("Room1")
+cb.getEntityAttrs("Room1", headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Get Entity.
 > Example
 ```js
-cb.getEntity('Room1')
+cb.getEntity('Room1', headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Get entities list of an entity type.
 > Example
  ```js
-cb.getEntityListType('Room')
+cb.getEntityListType('Room', headers)
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 ```
 ### Get All Entities.
 > Example
  ```js
-cb.listEntities()
+cb.listEntities(headers)
 .then((entities) => {console.log(entities)})
 .catch((err) => console.log(err))
 ```
@@ -85,7 +94,7 @@ cb.createEntity({
         "value": 26.5
     },
     "type": "Room"
-}).then((result) => console.log(result))
+}, headers).then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ##  Update Functions.
@@ -93,7 +102,7 @@ cb.createEntity({
 ### Update Entity Attribute Value.
 >Example
 ```js
-cb.updateEntityAttributeValue('Room1', 'temperature', 16)
+cb.updateEntityAttributeValue('Room1', 'temperature', 16, headers)
 .then((result) => {console.log(result)})
 .catch((err) => console.log(err))
 ```
@@ -103,7 +112,7 @@ cb.updateEntityAttributeValue('Room1', 'temperature', 16)
 cb.updateJSONAttrEntity('Room1', 'temperature', {
     "type": "Number",
     "value": 34.982398
-})
+}, headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
@@ -115,7 +124,7 @@ cb.replaceAllEntityAttributes("RoomTest", {
         "value": 720,
         "type": "Integer"
     }
-})
+}, headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
@@ -127,7 +136,7 @@ cb.updateEntityAttrs('Room1', {
         "value": 75.9345,
         "type": "Float"
     }
-})
+}, headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
@@ -139,7 +148,7 @@ cb.addJSONAttributeToEntity("Room1",{
 		      "value": 90,
 		      "type": "Integer"
 	    }
-})
+}, headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
@@ -148,13 +157,13 @@ cb.addJSONAttributeToEntity("Room1",{
 ### Delete Entity.
 > Example 
 ```js
-cb.deleteEntity("Room1")
+cb.deleteEntity("Room1", headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Delete Entity Attribute.
 ```js
-cb.deleteEntityAttribute("RoomTest", "pressure")
+cb.deleteEntityAttribute("RoomTest", "pressure", headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```

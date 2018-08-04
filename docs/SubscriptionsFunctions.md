@@ -14,18 +14,27 @@
 	    * [Delete Subscription](#delete-subscription)
 
 ## Read Functions.
+### Headers 
+
+For the examples we will use the next JSON as headers
+```js
+var headers = {
+    'Fiware-Correlator': '3451e5c2-226d-11e6-aaf0-d48564c29d20'
+}
+```
+But you can use another options,one empty JSON or you can ignore the headers if you don't need them
 
 ### Get Subscriptions.
 > Example
 ```js
-cb.listSubscriptions()
+cb.listSubscriptions(headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Get Subscription.
 > Example
 ```js
-cb.getSubscription("5a83c5463fc4dec59e4ef8e2")
+cb.getSubscription("5a83c5463fc4dec59e4ef8e2", headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
@@ -84,7 +93,7 @@ cb.createSubscription({
 		}
 	},
 	"throttling": 5
-})
+}, headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
@@ -138,14 +147,14 @@ cb.updateSubscription("5a93a9063fc4dec59e4ef8eb", {
 		}
 	},
 	"throttling": 5
-})
+}, headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
 ### Update Subscription Status.
 > Example
 ```js
-cb.updateSubscriptionStatus("5a81e50a3fc4dec59e4ef8dc", "active")
+cb.updateSubscriptionStatus("5a81e50a3fc4dec59e4ef8dc", "active", headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
@@ -155,7 +164,7 @@ cb.updateSubscriptionStatus("5a81e50a3fc4dec59e4ef8dc", "active")
 ##Delete Subscription.
 > Example
 ```js
-cb.deleteSubscription("5a93a9103fc4dec59e4ef8ec")
+cb.deleteSubscription("5a93a9103fc4dec59e4ef8ec", headers)
 .then((result) => console.log(result))
 .catch((err) => console.log(err))
 ```
