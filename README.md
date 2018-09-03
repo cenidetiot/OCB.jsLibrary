@@ -54,7 +54,7 @@ But you can use another options,one empty JSON or you can ignore the headers if 
 ### Connection configuration with Orion ContextBroker.
 
 ```js
- cb.config(urlContextBroker, port, version, headers)
+ cb.config(urlContextBroker, headers)
  .then((result) => console.log(result))
  .catch((err) => console.log(err))
  ```
